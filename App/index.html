@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Qantas">
+<head>
+<meta charset="utf-8">
+<title>Street shopping App</title>
+    <!-- CSS files start here -->
+    <link rel="shortcut icon" href="Images/images.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <!-- CSS files end here -->
+    <!-- js files start here -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <!-- js files end here -->
+    </head>
+<body>
+<div ng-controller="mainCtrl">
+ <div ng-include="'Templates/header.html'"></div>
+ <div ui-view></div>
+</div>
+    
+<script src="Login/login.js"></script>
+<script src="Login/loginCtrl.js"></script>
+<script src="Login/authenticateSvc.js"></script>
+<script src="Register/register.js"></script>
+<script src="Register/registerCtrl.js"></script>    
+<script src="Products/products.js"></script>
+<script src="Products/productsCtrl.js"></script>
+<script src="Products/productsSvc.js"></script>
+<script src="Cart/cart.js"></script>
+<script src="Cart/cartCtrl.js"></script>
+<script src="Main/main.js"></script>
+<script src="Main/mainCtrl.js"></script>
+    
+<script src="app.js"></script>
+</body>
+</html>

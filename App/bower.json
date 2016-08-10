@@ -1,0 +1,14 @@
+{
+  "name": "streetshopping",
+  "description": "yes",
+  "main": "index.html",
+  "authors": [
+    "srinivasareddy"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "streetshopping"
+  ],
+  "homepage": "https://github.com/Masireddy/Test-repository",
+  "private": true
+}

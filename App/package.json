@@ -1,0 +1,27 @@
+{
+  "name": "streetshopping",
+  "version": "0.0.1",
+  "description": "This app is going to built on angular js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Masireddy/Street-Shopping.git"
+  },
+  "keywords": [
+    "street",
+    "shopping"
+  ],
+  "author": "srinivasa reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Masireddy/Street-Shopping/issues"
+  },
+  "homepage": "https://github.com/Masireddy/Street-Shopping#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}
