@@ -1,0 +1,11 @@
+body { 
+       padding-top: 70px;
+       
+    }
+Cart.noItems {
+    
+    margin: auto;
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+}

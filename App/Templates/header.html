@@ -1,4 +1,4 @@
-<nav role="navigation" class="navbar navbar-inverse" >
+<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" >
        <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -34,10 +34,13 @@
         </form>
          <ul class="nav navbar-nav navbar-right" ng-if="!loggedUserDetails.isLoggedIn">            
             <li ui-sref="register"><a href="#"> <span class="glyphicon glyphicon-user"> Register</span></a></li>
-            <li ui-sref="login"><a href="#"> <span class="glyphicon glyphicon-log-in"> Login</span></a></li>          
+             <!-- ui-sref shows, we are using UI routing -->
+            <li ui-sref="login"><a href="#"> <span class="glyphicon glyphicon-log-in"> Login</span></a></li>  
+              <!-- ui-sref shows, we are using UI routing -->
         </ul>
         <ul class="nav navbar-nav navbar-right" ng-if="loggedUserDetails.isLoggedIn" >
          <li ui-sref="cart"><a href="#"><span class="glyphicon glyphicon-shopping-cart"> Cart({{itemCount}})</span></a></li>
+            <li class="active"><a href="#"><span>Logged in as: {{loggedUserDetails.firstname}} {{loggedUserDetails.lastname}} , {{loggedUserDetails.designation}} </span></a></li>
           <li ng-click="logOut()"><a href=""> <span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
         </ul>
     </div>

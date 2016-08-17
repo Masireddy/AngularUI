@@ -1,22 +1,28 @@
 <div class="container">
 <div class="table-responsive">
+<label for="search">Search<input type="text" class="form-control" name="search" ng-model="productsSearch" placeholder="Search for products"></label>
+<br>
 <table class="table table-hover">
 <tr>
-    <th>Model</th>
+    <th>
+    Model
+    <span ng-click="setOrderProperty('model')" class="glyphicon pull-right" ng-class="{ 'glyphicon-chevron-down': orderProperty != 'model', 'glyphicon-chevron-up' : orderProperty == 'model' }"></span>
+    </th>
     <th>Category</th>
     <th>Description</th>
     <th>Price</th>
     <th>Image</th>
     <th> &nbsp;</th>
 </tr>    
-<tr ng-repeat="product in products">
+<tr ng-repeat="product in products | filter:productsSearch:category" >
 <td>{{product.model}}</td>
 <td>{{product.category}}</td>
-<td>{{product.description}}</td>
+<td>{{product.description |limitTo:10}}</td>
 <td>{{product.price | currency: " Rs."}}</td>
 <td><img src= {{product.imageUrl}} width="150" height="120"></td>
-<td><button type="button" ng-click="addItemsToCart(product)">Add to Cart</button></td>
+<td><button type="button" class="btn btn-default btn-sm" ng-click="addItemsToCart(product)">Add to Cart</button></td>
 </tr>    
 </table>
-    </div>
 </div>
+</div>
+{{error}}

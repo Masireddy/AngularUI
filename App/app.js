@@ -2,7 +2,8 @@ angular.module("Qantas",["ui.router","main","login","products","register","cart"
 
 angular.module("Qantas")
     .config(function($stateProvider,$urlRouterProvider){
-    
+    // we have used config function for declaring the states using $stateProvider
+    // $state is used to goto provide state in eg: $state.go('home')
     var homeObj = {
          templateUrl : "Templates/home.html",
          url : "home"
