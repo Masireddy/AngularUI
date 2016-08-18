@@ -3,7 +3,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="firstName">First Name:</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" ng-model="firstName" name="firstName" placeholder="Enter First name" ng-required=true ng-minlength=5 ng-maxlength=15 ng-pattern=" /^[a-zA-Z]+$/">
+      <input type="text" ng-Validate-Alphabets class="form-control" ng-model="firstName" name="firstName" placeholder="Enter First name" ng-required=true ng-minlength=5 ng-maxlength=15 ng-pattern=" /^[a-zA-Z]+$/">
     <div ng-show="registerForm.firstName.$dirty">
         <div ng-show="registerForm.firstName.$error.required"><p>First name is mandatory</p></div>
         <div ng-show="registerForm.firstName.$error.minlength"> <p>First name should have minimum characters of 5 </p></div>
@@ -16,7 +16,7 @@
     <div class="form-group">
     <label class="control-label col-sm-2" for="lastName">Last Name:</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" ng-model="lastName" name="lastName" placeholder="Enter Last name" ng-required=true ng-minlength=5 ng-maxlength=15 ng-pattern="/^[a-zA-Z]+$/">
+      <input type="text" ng-Validate-Alphabets class="form-control" ng-model="lastName" name="lastName" placeholder="Enter Last name" ng-required=true ng-minlength=5 ng-maxlength=15 ng-pattern="/^[a-zA-Z]+$/">
     <div ng-show="registerForm.lastName.$dirty">
         <div ng-show="registerForm.lastName.$error.required"><p>Last name is mandatory</p></div>
         <div ng-show="registerForm.lastName.$error.minlength"> <p>Last name should have minimum characters of 5 </p></div>
@@ -29,7 +29,7 @@
    <div class="form-group">
     <label class="control-label col-sm-2" for="age">Age:</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" ng-model="age" name="age" placeholder="Enter age" ng-required=true ng-maxlength=3 ng-pattern="/^[0-9]{1,10}$/">
+      <input type="text" ng-Validate-Numbers maxlength=3 class="form-control" ng-model="age" name="age" placeholder="Enter age" ng-required=true ng-maxlength=3 ng-pattern="/^[0-9]{1,10}$/">
         <div ng-show="registerForm.age.$dirty">
         <div ng-show="registerForm.age.$error.required"><p>Age is a mandatory field</p></div>
         <div ng-show="registerForm.age.$error.maxlength"><p>Age should contain 3 characters only</p></div>
@@ -47,6 +47,18 @@
     </div>
   </div>    
     
+
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="DOB">Date of Birth:</label>
+    <div class="col-sm-4">
+      <input type="text" ng-Date-Picker class="form-control" name="DOB" ng-required=true mindays=0 maxdays=15>
+        <div ng-show="registerForm.DOB.$dirty">
+        <div ng-show="registerForm.DOB.$error.required"><p>Date of Birth is a mandatory field</p></div>
+        </div>
+    </div>       
+    </div>  
+    
+
   <div class="form-group">
     <label class="control-label col-sm-2" for="country">Country:</label>
     <div class="col-sm-4"> 

@@ -1,4 +1,4 @@
-angular.module("Qantas",["ui.router","main","login","products","register","cart"]);
+angular.module("Qantas",["ui.router","main","login","products","register","cart","components"]);
 
 angular.module("Qantas")
     .config(function($stateProvider,$urlRouterProvider){

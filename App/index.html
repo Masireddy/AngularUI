@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
     <!-- CSS files end here -->
     <!-- js files start here -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -15,27 +16,42 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- js files end here -->
     </head>
 <body>
 <div ng-controller="mainCtrl">
- <div ng-include="'Templates/header.html'"></div>
- <div ui-view></div>
-    <!-- ui-view shows, we are using UI routing -->
-</div>
+<div ng-Load-Header></div> 
+<!--<div ng-include="'Templates/header.html'"></div>replaced this with custom directive--->
+<div ui-view></div>
+<!-- ui-view shows, we are using UI routing -->
+<!-- <ng-Validate-Alphabets>this is element</ng-Validate-Alphabets> -->
+<!--<div ng-Validate-Alphabets>This div tag with directive</div> -->
+<!-- the above one is declaration of directive -->
+</div> 
     
 <script src="Login/login.js"></script>
 <script src="Login/loginCtrl.js"></script>
 <script src="Login/authenticateSvc.js"></script>
+
 <script src="Register/register.js"></script>
 <script src="Register/registerCtrl.js"></script>    
+
 <script src="Products/products.js"></script>
 <script src="Products/productsCtrl.js"></script>
 <script src="Products/productsSvc.js"></script>
+
 <script src="Cart/cart.js"></script>
 <script src="Cart/cartCtrl.js"></script>
-<script src="Main/main.js"></script>
+
+    <script src="Main/main.js"></script>
 <script src="Main/mainCtrl.js"></script>
+    
+<script src="Reusable/component.js"></script>
+<script src="Reusable/loadHeaderDirective.js"></script>
+<script src="Reusable/validateAlphabets.js"></script>
+<script src="Reusable/validateNumbers.js"></script>
+<script src="Reusable/datePicker.js"></script>
     
 <script src="app.js"></script>
 </body>
