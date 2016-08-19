@@ -4,17 +4,24 @@
 <br>
 <table class="table table-hover">
 <tr>
-    <th>
-    Model
-    <span ng-click="setOrderProperty('model')" class="glyphicon pull-right" ng-class="{ 'glyphicon-chevron-down': orderProperty != 'model', 'glyphicon-chevron-up' : orderProperty == 'model' }"></span>
+    <th>Model
+    <a href="#" ng-click="changeCriteria('model')">
+    <span  class="glyphicon glyphicon-triangle-top"></span>
+    <span  class="glyphicon glyphicon-triangle-bottom"></span>
+    </a>
     </th>
     <th>Category</th>
     <th>Description</th>
-    <th>Price</th>
+    <th>Price
+    <a href="#" ng-click="changeCriteria('price')">
+    <span  class="glyphicon glyphicon-triangle-top"></span>
+    <span  class="glyphicon glyphicon-triangle-bottom"></span>
+    </a>
+    </th>
     <th>Image</th>
     <th> &nbsp;</th>
 </tr>    
-<tr ng-repeat="product in products | filter:productsSearch:category" >
+<tr ng-repeat="product in products | filter:productsSearch:category | orderBy:sortCriteria" >
 <td>{{product.model}}</td>
 <td>{{product.category}}</td>
 <td>{{product.description |limitTo:10}}</td>

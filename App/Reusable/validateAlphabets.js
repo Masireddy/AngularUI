@@ -11,7 +11,7 @@ angular.module("components")
                     post: function(scope,element,attrs){
                      element.bind('keypress',function(evt){
                         
-                    if ((evt.keyCode >=97 && evt.keyCode <=112)||(evt.keyCode >=65 && evt.keyCode <=90)  ){
+                    if (evt.keyCode >= 65 && evt.keyCode <= 125){
                             //allow if alphabets
                         }
                         else {
