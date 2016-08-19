@@ -1,12 +1,12 @@
 angular.module("components")
-    .directive("ngValidateNumbers",[function(){
-            
+    .directive("ngValidateNumbers",[function(){            
          return {
              restrict: "ACE",
              compile : function(element,args){       
                  return {                     
                      pre: function(scope,element,attrs){
                          element.css("font-weight","bold");
+                         // here we can write css
                      },
                      post: function(scope,element,attrs){
                          element.bind("keypress",function(evt){

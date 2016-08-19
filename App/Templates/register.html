@@ -51,7 +51,7 @@
     <div class="form-group">
     <label class="control-label col-sm-2" for="DOB">Date of Birth:</label>
     <div class="col-sm-4">
-      <input type="text" ng-Date-Picker class="form-control" name="DOB" ng-required=true mindays=0 maxdays=15>
+      <input type="text" ng-Date-Picker class="form-control" name="DOB" ng-required=true mindays="-100Y" maxdays=0 month=true year=true>
         <div ng-show="registerForm.DOB.$dirty">
         <div ng-show="registerForm.DOB.$error.required"><p>Date of Birth is a mandatory field</p></div>
         </div>
